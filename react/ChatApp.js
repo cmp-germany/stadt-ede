@@ -10,15 +10,15 @@ var conversations = {
     },
     {
       user: "volker-miller",
-      message: "Schön, dass Sie sich melden!"
+      message: "Great that you write!"
     },
     {
       user: "me",
-      message: "Hatte ich doch versprochen ;-)"
+      message: "Well, I promised, didn't I? ;-)"
     },
     {
       user: "me",
-      message: "Ich bereite gerade die Dokumente vor ... einen Moment"
+      message: "I'm just preparing the documents. One minute, please..."
     }
   ]
 };
@@ -117,7 +117,7 @@ var ChatTab = React.createClass({
         );
       }, {users: users});
     } else {
-      chatMessages = <li className="chat__message chat__message--bot">Noch keine Konversation geführt.</li>;
+      chatMessages = <li className="chat__message chat__message--bot">No messages have been yet sent.</li>;
     }
 
     var headerClasses = "chat__header online-status--chat online-status--chat-header";
@@ -172,7 +172,7 @@ var ChatTab = React.createClass({
             <div className="chat__actions">
               <input
                 type="text"
-                placeholder="Nachricht"
+                placeholder="Message"
                 className="form-chat form-chat--messagebox"
                 name="chat-message"
                 defaultValue={""}
@@ -233,14 +233,14 @@ var ChatTabContacts = React.createClass({
           </header>
           <div id="chat-list" className="collapse chat__content">
             <div className="chat__actions alignment--center">
-              <input className="form-chat" type="text" name="chat-search" placeholder="Suche..." />
+              <input className="form-chat" type="text" name="chat-search" placeholder="Search..." />
               <button className="btn btn-important button--chat button--chat-search" type="button" name="chat-search-button"><span className="glyphicon glyphicon-menu-right" aria-hidden="true" /></button>
             </div>
             <ul className="chat__list">
               {contacts}
             </ul>
             <div className="chat__filter">
-              <button className="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
+              <button className="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">All (4)</button>
               <button className="btn btn-important button--filter-switch button--filter-switch--deactive" type="button" name="button-online">Online (2)</button>
             </div>
           </div>
