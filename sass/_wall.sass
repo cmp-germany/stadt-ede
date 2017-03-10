@@ -2,9 +2,9 @@
 body
   background-color: rgba(19, 35, 51, 0.05)
   a
-    color: $color-important
+    color: $color-primary
     &:hover
-      color: $color-primary
+      color: darken($color-primary, 20)
 
 
 =wall-widget__header
@@ -50,7 +50,7 @@ body
       font-size: 30px
       color: darken($color-primary, 20)
       &.material-icons--clickable
-        color: $color-important
+        color: $color-primary
     h3
       +wall-widget__header-text
 
@@ -84,12 +84,12 @@ body
       text-decoration: none
 
     &:hover
-      color: $color-important
+      color: $color-primary
 
   &.is-selected-right
     a.element-right
       color: $font-color
-      border-bottom: solid 1px $color-important
+      border-bottom: solid 1px $color-primary
 
     .select-toggle
       -moz-transform: rotate(0deg)
@@ -101,7 +101,7 @@ body
   &.is-selected-left
     a.element-left
       color: $font-color
-      border-bottom: solid 1px $color-important
+      border-bottom: solid 1px $color-primary
 
     .select-toggle
       -moz-transform: rotate(180deg)
@@ -520,6 +520,12 @@ body
 .wall-widget--activity-post-text
   text-align: left
 
+.shared-by
+  text-align: left
+  font-size: 12px
+  font-weight: bold
+  color: #e20512
+  margin-bottom: 0px
 
 .wall-widget--news
   .wall-widget--content
